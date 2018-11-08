@@ -21,17 +21,20 @@ public class Producer extends Thread {
 	public void run() {
 		while (true) {
 			try {
-				Integer item = rand.nextInt(100);
+				
 				empty.vent();
 				mutex.vent();
+				Integer item = rand.nextInt(100);
 				buffer.add(item);
 				System.out.println("Produced: " + item);
+				
 				mutex.signal();
 				full.signal();
 			} catch (InterruptedException e) {
 
 				e.printStackTrace();
 			}
+			
 		}
 	}
 }
