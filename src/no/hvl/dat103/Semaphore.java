@@ -10,7 +10,7 @@ public class Semaphore {
 
 	public void vent() {
 		while (S <= 0) {
-
+System.out.println("t");
 		}
 		S--;
 	}
