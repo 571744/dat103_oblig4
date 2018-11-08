@@ -8,6 +8,10 @@ public class Oppgave2 {
 		while(S<=0) {
 			
 		}
-		S--;
+		this.S--;
+	}
+	
+	public void signal(Integer S) {
+		this.S++;
 	}
 }
