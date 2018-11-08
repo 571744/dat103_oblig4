@@ -8,14 +8,14 @@ public class Semaphore {
 		this.S = S;
 	}
 
-	public void wait(Semaphore S) {
-		while (S.S <= 0) {
+	public void vent() {
+		while (S <= 0) {
 
 		}
-		S.S--;
+		S--;
 	}
 
-	public void signal(Semaphore S) {
-		S.S++;
+	public void signal() {
+		S++;
 	}
 }
