@@ -1,4 +1,6 @@
-package no.hvl.dat103;
+package Oppg2_del2;
+
+import java.util.concurrent.Semaphore;
 
 public class BoundedBuffer {
  public static void main(String[] args) {

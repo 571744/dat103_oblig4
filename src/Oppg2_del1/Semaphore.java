@@ -1,4 +1,4 @@
-package no.hvl.dat103;
+package Oppg2_del1;
 
 public class Semaphore {
 
@@ -11,10 +11,12 @@ public class Semaphore {
 	public void vent() {
 		while (S <= 0) {
 		}
+		
 		S--;
 	}
 
 	public void signal() {
+		
 		S++;
 	}
 }

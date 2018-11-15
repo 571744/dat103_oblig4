@@ -1,4 +1,4 @@
-package no.hvl.dat103;
+package Oppg2_del1;
 
 import java.util.Random;
 
@@ -30,6 +30,12 @@ public class Consumer extends Thread{
 
 				e.printStackTrace();
 			}
+			try {
+				Thread.sleep(200);
+				} catch(InterruptedException e) {
+					e.printStackTrace();
+					System.out.println("Sleep failed");
+				}
 		}
 	}
 }

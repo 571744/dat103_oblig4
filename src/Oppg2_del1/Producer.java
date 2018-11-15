@@ -1,4 +1,4 @@
-package no.hvl.dat103;
+package Oppg2_del1;
 
 import java.util.Random;
 
@@ -21,20 +21,24 @@ public class Producer extends Thread {
 	public void run() {
 		while (true) {
 			try {
-				
+
 				empty.vent();
 				mutex.vent();
 				Integer item = rand.nextInt(100);
-				buffer.add(item);
 				System.out.println("Produced: " + item);
-				
+				buffer.add(item);
 				mutex.signal();
 				full.signal();
 			} catch (InterruptedException e) {
-
 				e.printStackTrace();
 			}
-			
+
+			try {
+				Thread.sleep(200);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+				System.out.println("Sleep failed");
+			}
 		}
 	}
 }

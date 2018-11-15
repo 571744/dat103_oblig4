@@ -1,4 +1,4 @@
-package no.hvl.dat103;
+package Oppg2_del2;
 
 import java.util.LinkedList;
 
