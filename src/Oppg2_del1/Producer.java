@@ -2,6 +2,9 @@ package Oppg2_del1;
 
 import java.util.Random;
 
+import Oppg2_del1.Buffer;
+import Oppg2_del1.Semaphore;
+
 public class Producer extends Thread {
 	private Buffer buffer;
 	Random rand = new Random();

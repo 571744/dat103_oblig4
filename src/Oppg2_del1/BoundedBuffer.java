@@ -1,5 +1,8 @@
 package Oppg2_del1;
 
+import Oppg2_del1.Buffer;
+import Oppg2_del1.Semaphore;
+
 public class BoundedBuffer {
  public static void main(String[] args) {
 	Buffer buffer = new Buffer();
