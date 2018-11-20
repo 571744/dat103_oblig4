@@ -19,17 +19,20 @@ public class Reader extends Thread {
 
 	@Override
 	public void run() {
+		
+		
 		while (true) {
 			try {
 				mutex.acquire();
 				read_count++;
+				
 				if (read_count == 1) {
 					rw_mutex.acquire();
 				}
 
 				mutex.release();
 				database.print();
-				mutex.acquire();
+//				mutex.acquire();
 
 				read_count--;
 				if(read_count == 0) {

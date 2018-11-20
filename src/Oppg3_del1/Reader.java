@@ -28,7 +28,7 @@ public class Reader extends Thread {
 				}
 				mutex.signal();
 				database.print();
-				mutex.vent();
+//				mutex.vent();
 
 				read_count--;
 				if(read_count == 0) {
