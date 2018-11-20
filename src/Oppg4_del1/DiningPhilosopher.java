@@ -32,7 +32,7 @@ class philosopher extends Thread {
 
     private final Object leftStick;
     private final Object rightStick;
-    private static Semaphore sem;
+    private Semaphore sem;
 
     public philosopher(Object l, Object r) {
         leftStick = l;
@@ -45,7 +45,7 @@ class philosopher extends Thread {
         Random rnd = new Random();
         while (true) {
             try {
-                sleep(rnd.nextInt(1000)); //Think
+                sleep(rnd.nextInt(2000)); //Think
 
                 sem.vent();
                 synchronized (leftStick) {
@@ -55,7 +55,7 @@ class philosopher extends Thread {
                     synchronized (rightStick) {
                         System.out.printf("%s spiser %n", Thread.currentThread().getId());
 
-                        sleep(rnd.nextInt(1000)); //Eat
+                        sleep(rnd.nextInt(2000)); //Eat
                     }
                 }
                 sem.signal();
