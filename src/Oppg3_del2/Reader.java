@@ -32,7 +32,7 @@ public class Reader extends Thread {
 
 				mutex.release();
 				database.print();
-//				mutex.acquire();
+//				mutex.acquire();a
 
 				read_count--;
 				if(read_count == 0) {
@@ -42,7 +42,11 @@ public class Reader extends Thread {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		
+			try {
+				Thread.sleep(100);
+			}catch(InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
