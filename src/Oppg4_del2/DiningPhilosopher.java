@@ -33,7 +33,7 @@ class philosopher extends Thread {
     private final Object leftStick;
     private final Object rightStick;
     private static Semaphore sem;
-    private static Semaphore test;
+
 
     public philosopher(Object l, Object r) {
         leftStick = l;
